@@ -1,6 +1,12 @@
+---
+name: amplemarket-api
+description: >
+  Amplemarket is {{COMPANY_NAME}}'s sales engagement platform — used for personalized outreach sequences. Auth is in `references/credentials.md`. **Base URL:** `https://api.amplemarket.com` **Auth:** `Authorization: Bearer {{AMPLEMARKET_KEY}}` Use this skill when working with amplemarket api tasks or workflows.
+---
+
 # Amplemarket API Reference
 
-Amplemarket is {{COMPANY_NAME}}'s sales engagement platform — used for personalized outreach sequences.
+Amplemarket is Enterprise Platform's sales engagement platform — used for personalized outreach sequences.
 Auth is in `references/credentials.md`.
 
 **Base URL:** `https://api.amplemarket.com`
@@ -70,7 +76,7 @@ POST /contacts
   "phone": "+1-555-123-4567",
   "custom_fields": {
     "icp_score": "9",
-    "ai_hook": "Your expansion into APAC hiring is exactly where {{COMPANY_NAME}} delivers..."
+    "ai_hook": "Your expansion into APAC hiring is exactly where Enterprise Platform delivers..."
   }
 }
 ```
@@ -136,7 +142,7 @@ POST /sequences/{sequenceId}/enrollments
   "custom_variables": {
     "first_name": "John",
     "company_name": "Acme Corp",
-    "hook": "Your expansion into APAC is where {{COMPANY_NAME}} delivers instantly..."
+    "hook": "Your expansion into APAC is where Enterprise Platform delivers instantly..."
   }
 }
 ```
@@ -191,14 +197,14 @@ When building sequences via API:
       "step_number": 1,
       "type": "email",
       "delay_days": 0,
-      "subject": "{{company_name}} + {{COMPANY_NAME}}",
+      "subject": "{{company_name}} + Enterprise Platform",
       "body": "Hi {{first_name}},\n\n{{hook}}\n\nWe help companies like yours hire globally in 160+ countries without setting up a legal entity.\n\nOpen to a quick call?\n\n{{sender_name}}"
     },
     {
       "step_number": 2,
       "type": "email",
       "delay_days": 3,
-      "subject": "Re: {{company_name}} + {{COMPANY_NAME}}",
+      "subject": "Re: {{company_name}} + Enterprise Platform",
       "body": "Following up, {{first_name}}. Just wanted to make sure my first note landed..."
     },
     {
